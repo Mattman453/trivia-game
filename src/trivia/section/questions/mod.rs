@@ -10,6 +10,11 @@ pub(in super) struct Question {
 
 impl Question {
 
+    /*
+    This function creates a new question with only a question and answer and thus without audio or
+    video. Should these need to be added, after creating the question, call add_video or add_audio
+    to add them to the question.
+     */
     fn new(question: String, answer: String) -> Self {
 
         let mut question = Question {question, answer, audio: None, video: None};
