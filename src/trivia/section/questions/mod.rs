@@ -21,6 +21,13 @@ impl Question {
         question
     }
 
+    /*
+    Adds audio to a specific question. Takes a File struct as the audio. Supported formats are:
+    - MP3 (.mp3)
+    - FLAC (.flac)
+    - Vorbis (.ogg)
+    - WAV (.wav)
+     */
     fn add_audio(&mut self, audio: File) {
 
         self.audio = Some(audio);
