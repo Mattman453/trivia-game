@@ -42,10 +42,14 @@ impl Question {
         self.video = Some(video);
     }
 
-
+    /*
+    This function plays the video connected to a question. If no video is attached, a message will
+    be printed to the console.
+     */
     fn play_video(&mut self) {
         if self.video.is_none() {
 
+            // TODO: Update section to print a log file instead of to console
             println!("No video attached to question.");
             return;
         }
