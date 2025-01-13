@@ -49,6 +49,10 @@ impl Question {
         // TODO: Add implementation for playing audio files with rodio
     }
 
+    /*
+    Adds a video file to a question. Video backend not yet implemented or decided upon. Set to take
+    a File struct.
+     */
     fn add_video(&mut self, video: File) {
 
         self.video = Some(video);
