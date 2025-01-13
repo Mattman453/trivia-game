@@ -21,7 +21,6 @@ impl Question {
         self.audio = Some(audio);
     }
 
-    // TODO: Log failed uses instead of printing to the console
     /*
     This function plays the audio connected to a question. If no audio is attached, a message will
     be printed to the console.
@@ -30,6 +29,7 @@ impl Question {
 
         if self.audio.is_none() {
 
+            // TODO: Log failed uses instead of printing to the console
             println!("No audio attached to question.");
             return;
         }
