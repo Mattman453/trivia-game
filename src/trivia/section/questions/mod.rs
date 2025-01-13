@@ -21,11 +21,6 @@ impl Question {
         self.audio = Some(audio);
     }
 
-    fn add_video(&mut self, video: File) {
-
-        self.video = Some(video);
-    }
-
     // TODO: Log failed uses instead of printing to the console
     /*
     This function plays the audio connected to a question. If no audio is attached, a message will
@@ -39,10 +34,22 @@ impl Question {
             return;
         }
 
-        if self.audio.is_some() {
+        // TODO: Add implementation for playing audio files with rodio
+    }
 
-            // TODO: Add implementation for playing audio files with rodio
+    fn add_video(&mut self, video: File) {
+
+        self.video = Some(video);
+    }
+
+
+    fn play_video(&mut self) {
+        if self.video.is_none() {
+
+            println!("No video attached to question.");
             return;
         }
+
+        // TODO: Add implementation for playing video files in fltk, in separate window, or different backend
     }
 }
