@@ -14,6 +14,10 @@ pub(super) struct Trivia {
 }
 
 impl Trivia {
+    /*
+    Constructor for a Trivia struct. Takes the title of the trivia pack and returns a Trivia struct
+    containing an empty vector of sections and the title string.
+     */
     fn new(title: String) -> Self {
         let mut sections: Vec<Section> = Vec::new();
         let mut trivia = Trivia { title, sections };
