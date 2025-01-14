@@ -1,5 +1,12 @@
 use std::fs::File;
 
+/*
+This struct is the basic structure of a trivia game. Each Question struct contains a question,
+answer, audio, and video. The question and answer components contain the actual information related
+to a question. The audio component is an optional File that will play audio for questions that rely
+on audio for their answer. The video component is an optional File that will play a video for
+questions that require video.
+ */
 pub(super) struct Question {
     question: String,
     answer: String,
