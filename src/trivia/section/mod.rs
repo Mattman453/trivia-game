@@ -28,4 +28,11 @@ impl Section {
         };
         section
     }
+
+    /*
+    This function adds a Question struct to the questions vector of a Section, expanding the set.
+     */
+    fn add_question(&mut self, question: Question) {
+        self.questions.push(question);
+    }
 }
