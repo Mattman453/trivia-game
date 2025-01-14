@@ -1,7 +1,6 @@
 use std::fs::File;
 
-pub(in super) struct Question {
-
+pub(super) struct Question {
     question: String,
     answer: String,
     audio: Option<File>,
@@ -9,15 +8,18 @@ pub(in super) struct Question {
 }
 
 impl Question {
-
     /*
     This function creates a new question with only a question and answer and thus without audio or
     video. Should these need to be added, after creating the question, call add_video or add_audio
     to add them to the question.
      */
     fn new(question: String, answer: String) -> Self {
-
-        let mut question = Question {question, answer, audio: None, video: None};
+        let mut question = Question {
+            question,
+            answer,
+            audio: None,
+            video: None,
+        };
         question
     }
 
@@ -29,7 +31,6 @@ impl Question {
     - WAV (.wav)
      */
     fn add_audio(&mut self, audio: File) {
-
         self.audio = Some(audio);
     }
 
@@ -38,9 +39,7 @@ impl Question {
     be printed to the console.
      */
     fn play_audio(&mut self) {
-
         if self.audio.is_none() {
-
             // TODO: Log failed uses instead of printing to the console
             println!("No audio attached to question.");
             return;
@@ -54,7 +53,6 @@ impl Question {
     a File struct.
      */
     fn add_video(&mut self, video: File) {
-
         self.video = Some(video);
     }
 
@@ -64,7 +62,6 @@ impl Question {
      */
     fn play_video(&mut self) {
         if self.video.is_none() {
-
             // TODO: Update section to print a log file instead of to console
             println!("No video attached to question.");
             return;
