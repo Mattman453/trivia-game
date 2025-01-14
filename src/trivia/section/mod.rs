@@ -1,6 +1,6 @@
 use crate::trivia::section::questions::Question;
 
-mod questions;
+pub mod questions;
 
 /*
 This struct contains information related to a section of a trivia game. It is designed around
@@ -9,7 +9,7 @@ is the title of the section in String format. The rules component is a String th
 rules pertaining to a topic. The questions component is a Vector of Questions that are related to a
 topic. Information on the Question struct can be found in the "questions" folder.
  */
-pub(super) struct Section {
+pub struct Section {
     name: String,
     rules: String,
     questions: Vec<Question>,
@@ -19,7 +19,7 @@ impl Section {
     /*
     This function creates a new section struct of a trivia game.
      */
-    fn new(name: String, rules: String) -> Self {
+    pub(crate) fn new(name: String, rules: String) -> Self {
         let mut questions: Vec<Question> = Vec::new();
         let mut section: Section = Section {
             name,
