@@ -2,10 +2,17 @@ use crate::trivia::section::questions::Question;
 
 mod questions;
 
+/*
+This struct contains information related to a section of a trivia game. It is designed around
+containing all questions related to a specific topic such as "Racing" or "Music". The name component
+is the title of the section in String format. The rules component is a String that contains the
+rules pertaining to a topic. The questions component is a Vector of Questions that are related to a
+topic. Information on the Question struct can be found in the "questions" folder.
+ */
 pub(super) struct Section {
     name: String,
     rules: String,
-    questions: Vec<questions::Question>,
+    questions: Vec<Question>,
 }
 
 impl Section {
